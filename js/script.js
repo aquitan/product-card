@@ -102,6 +102,45 @@ var swiper = new Swiper(".mySwiperBanner", {
       el: ".swiper-pagination",
     },
   });
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
 
 let gallerySlider = null
 let mediaQuery = 1000
@@ -156,120 +195,6 @@ const sliderDestroy = () => {
     console.log('swiper-destroy')
     gallerySlider.destroy()
 }
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
-const toggleModal = () => {
-    let modal = document.querySelector('.dialog')
-    let callbackBtn = document.querySelector('.block-menu-number')
-    let genCloseBtn = document.querySelector('.gen-modal-close')
-
-    callbackBtn.addEventListener('click', () => {
-        modal.showModal()
-    })
-
-    modal.addEventListener("click", e => {
-        const dialogDimensions = modal.getBoundingClientRect()
-        if (
-          e.clientX < dialogDimensions.left ||
-          e.clientX > dialogDimensions.right ||
-          e.clientY < dialogDimensions.top ||
-          e.clientY > dialogDimensions.bottom
-        ) {
-          modal.close()
-          togleModalTimePicker(true)
-        }
-      })
-}
-
-toggleModal()
-
-const togleModalTimePicker = (hide = false) => {
-    const pickTimeBtn = document.querySelector('.dialog-time-toggle')
-    const timeContainer = document.querySelector('.dialog-toggle-container')
-
-    const dateInput = document.querySelector('.dialog-date')
-    const timeInput = document.querySelector('.dialog-time')
-
-    pickTimeBtn.addEventListener('click', () =>{
-        pickTimeBtn.classList.add('dialog-time-toggle-hide')
-        timeContainer.classList.add('dialog-toggle-container-show')
-
-        dateInput.addEventListener('focus', () => {
-            dateInput.setAttribute('type', 'date')
-        })
-        timeInput.addEventListener('focus', () => {
-            timeInput.setAttribute('type', 'time')
-        })
-    })
-
-    if (hide) {
-        pickTimeBtn.classList.remove('dialog-time-toggle-hide')
-        timeContainer.classList.remove('dialog-toggle-container-show')
-        dateInput.setAttribute('type', 'text')
-        timeInput.setAttribute('type', 'text')
-    }
-
-}
-
-togleModalTimePicker()
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -340,17 +265,6 @@ var swiper = new Swiper(".mySwiperSolutions", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  });
 const toggleMobileMenu = () => {
     const burger = document.querySelector('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -381,3 +295,89 @@ const toggleSubmenuItem = () => {
 }
 
 toggleSubmenuItem()
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
+var swiper = new Swiper(".mySwiperTrust", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+const toggleModal = () => {
+    let modal = document.querySelector('.dialog')
+    let callbackBtn = document.querySelector('.block-menu-number')
+    let genCloseBtn = document.querySelector('.gen-modal-close')
+
+    callbackBtn.addEventListener('click', () => {
+        modal.showModal()
+    })
+
+    modal.addEventListener("click", e => {
+        const dialogDimensions = modal.getBoundingClientRect()
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          modal.close()
+          togleModalTimePicker(true)
+        }
+      })
+}
+
+toggleModal()
+
+const togleModalTimePicker = (hide = false) => {
+    const pickTimeBtn = document.querySelector('.dialog-time-toggle')
+    const timeContainer = document.querySelector('.dialog-toggle-container')
+
+    const dateInput = document.querySelector('.dialog-date')
+    const timeInput = document.querySelector('.dialog-time')
+
+    pickTimeBtn.addEventListener('click', () =>{
+        pickTimeBtn.classList.add('dialog-time-toggle-hide')
+        timeContainer.classList.add('dialog-toggle-container-show')
+
+        dateInput.addEventListener('focus', () => {
+            dateInput.setAttribute('type', 'date')
+        })
+        timeInput.addEventListener('focus', () => {
+            timeInput.setAttribute('type', 'time')
+        })
+    })
+
+    if (hide) {
+        pickTimeBtn.classList.remove('dialog-time-toggle-hide')
+        timeContainer.classList.remove('dialog-toggle-container-show')
+        dateInput.setAttribute('type', 'text')
+        timeInput.setAttribute('type', 'text')
+    }
+
+}
+
+togleModalTimePicker()
