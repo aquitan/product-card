@@ -898,9 +898,9 @@ body {
 }
 
 .catalog-active {
-    -webkit-transform: translateY(26%);
-        -ms-transform: translateY(26%);
-            transform: translateY(26%);
+    -webkit-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+            transform: translateY(20%);
     opacity: 100%;
     display: grid;
     z-index: 99;
