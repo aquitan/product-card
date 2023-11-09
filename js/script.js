@@ -34,11 +34,6 @@ var swiper = new Swiper(".mySwiperBrands", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperBanner", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
 
 let gallerySlider = null
 let mediaQuery = 1000
@@ -93,6 +88,11 @@ const sliderDestroy = () => {
     console.log('swiper-destroy')
     gallerySlider.destroy()
 }
+var swiper = new Swiper(".mySwiperBanner", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -156,6 +156,136 @@ const checkOffsetTop = () => {
 }
 
 checkOffsetTop()
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+var swiper = new Swiper(".mySwiperSolutions", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 9,
+        spaceBetween: 50,
+      },
+    },
+  });
+var swiper = new Swiper(".mySwiperPopularCard", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    spaceBetween: 10
+  });
+
+  var swiper = new Swiper(".mySwiperPopular", {
+    slidesPerView: 2,
+    pagination: {
+      el: ".swiper-pagination-main",
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+    spaceBetween: 20,
+  });
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
 const toggleModal = () => {
     let modal = document.querySelector('.dialog')
     let callbackBtn = document.querySelector('.block-menu-number')
@@ -210,115 +340,6 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-var swiper = new Swiper(".mySwiperPopularCard", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    spaceBetween: 10
-  });
-
-  var swiper = new Swiper(".mySwiperPopular", {
-    slidesPerView: 2,
-    pagination: {
-      el: ".swiper-pagination-main",
-    },
-    breakpoints: {
-      600: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-    },
-    spaceBetween: 20,
-  });
-var swiper = new Swiper(".mySwiperSolutions", {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 9,
-        spaceBetween: 50,
-      },
-    },
-  });
 const toggleMobileMenu = () => {
     const burger = document.querySelector('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -360,24 +381,3 @@ var swiper = new Swiper(".mySwiperTrust", {
         prevEl: ".swiper-button-prev",
       },
   });
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
