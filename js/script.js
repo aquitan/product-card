@@ -34,65 +34,6 @@ var swiper = new Swiper(".mySwiperBrands", {
       },
     },
   });
-
-let gallerySlider = null
-let mediaQuery = 1000
-
-const checkWindowWidth = () => {
-    $(window).on('load resize', function () {
-        // Берём текущую ширину экрана
-        let windowWidth = $(this).innerWidth();
-
-        console.log('windowWidth', windowWidth)
-        
-        // Если ширина экрана меньше или равна mediaQuerySize(1024)
-        if (windowWidth <= mediaQuery) {
-          // Инициализировать слайдер если он ещё не был инициализирован
-          initializeSlider()
-        } else {
-          // Уничтожить слайдер если он был инициализирован
-          sliderDestroy()
-        }
-      });
-}
-
-checkWindowWidth()
-
-const initializeSlider = () => {
-    console.log('swiper-init')
-    gallerySlider = new Swiper(".mySwiperGallery", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-        },
-      });
-}
-
-const sliderDestroy = () => {
-    console.log('swiper-destroy')
-    gallerySlider.destroy()
-}
-var swiper = new Swiper(".mySwiperBanner", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -156,115 +97,65 @@ const checkOffsetTop = () => {
 }
 
 checkOffsetTop()
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-var swiper = new Swiper(".mySwiperSolutions", {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 9,
-        spaceBetween: 50,
-      },
-    },
-  });
-var swiper = new Swiper(".mySwiperPopularCard", {
+var swiper = new Swiper(".mySwiperBanner", {
     pagination: {
       el: ".swiper-pagination",
     },
-    spaceBetween: 10
   });
 
-  var swiper = new Swiper(".mySwiperPopular", {
-    slidesPerView: 2,
-    pagination: {
-      el: ".swiper-pagination-main",
-    },
-    breakpoints: {
-      600: {
-        slidesPerView: 2,
+let gallerySlider = null
+let mediaQuery = 1000
+
+const checkWindowWidth = () => {
+    $(window).on('load resize', function () {
+        // Берём текущую ширину экрана
+        let windowWidth = $(this).innerWidth();
+
+        console.log('windowWidth', windowWidth)
+        
+        // Если ширина экрана меньше или равна mediaQuerySize(1024)
+        if (windowWidth <= mediaQuery) {
+          // Инициализировать слайдер если он ещё не был инициализирован
+          initializeSlider()
+        } else {
+          // Уничтожить слайдер если он был инициализирован
+          sliderDestroy()
+        }
+      });
+}
+
+checkWindowWidth()
+
+const initializeSlider = () => {
+    console.log('swiper-init')
+    gallerySlider = new Swiper(".mySwiperGallery", {
+        slidesPerView: 1,
         spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
         },
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-    },
-    spaceBetween: 20,
-  });
+      });
+}
+
+const sliderDestroy = () => {
+    console.log('swiper-destroy')
+    gallerySlider.destroy()
+}
 var swiper = new Swiper(".mySwiperObjects", {
 	pagination: {
 	  el: ".swiper-pagination",
@@ -340,6 +231,126 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+var swiper = new Swiper(".mySwiperPopularCard", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    spaceBetween: 10
+  });
+
+  var swiper = new Swiper(".mySwiperPopular", {
+    slidesPerView: 2,
+    pagination: {
+      el: ".swiper-pagination-main",
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+    spaceBetween: 20,
+  });
+var swiper = new Swiper(".mySwiperSolutions", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 9,
+        spaceBetween: 50,
+      },
+    },
+  });
+var swiper = new Swiper(".mySwiperTrust", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
 const toggleMobileMenu = () => {
     const burger = document.querySelector('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -370,14 +381,3 @@ const toggleSubmenuItem = () => {
 }
 
 toggleSubmenuItem()
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  });
