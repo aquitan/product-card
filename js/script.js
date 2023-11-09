@@ -1,8 +1,3 @@
-var swiper = new Swiper(".mySwiperBanner", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
 $('.brand-switch').click(function(){
     var tab_id = $(this).attr('data-tab');
 
@@ -37,6 +32,11 @@ var swiper = new Swiper(".mySwiperBrands", {
         slidesPerView: 3,
         spaceBetween: 20,
       },
+    },
+  });
+var swiper = new Swiper(".mySwiperBanner", {
+    pagination: {
+      el: ".swiper-pagination",
     },
   });
 
@@ -156,75 +156,6 @@ const checkOffsetTop = () => {
 }
 
 checkOffsetTop()
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-const toggleMobileMenu = () => {
-    const burger = document.querySelector('.burger')
-    const mobileMenu = document.querySelector('.mobile-menu')
-    const body = document.body
-
-    burger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('mobile-menu-active')
-        burger.classList.toggle('burger-active')
-        body.classList.toggle('fixed-body')
-    })
-}
-
-toggleMobileMenu()
-
-const toggleSubmenuItem = () => {
-    const items = document.querySelectorAll('.mobile-menu-item')
-
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            if (item.children.length > 1) {
-                item.classList.toggle('mobile-subitems-active')
-            }
-            else {
-                return
-            }
-        })
-    })
-}
-
-toggleSubmenuItem()
 const toggleModal = () => {
     let modal = document.querySelector('.dialog')
     let callbackBtn = document.querySelector('.block-menu-number')
@@ -279,6 +210,45 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -327,38 +297,6 @@ var swiper = new Swiper(".mySwiperPopularCard", {
     },
     spaceBetween: 20,
   });
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  });
 var swiper = new Swiper(".mySwiperSolutions", {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -381,3 +319,65 @@ var swiper = new Swiper(".mySwiperSolutions", {
       },
     },
   });
+const toggleMobileMenu = () => {
+    const burger = document.querySelector('.burger')
+    const mobileMenu = document.querySelector('.mobile-menu')
+    const body = document.body
+
+    burger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('mobile-menu-active')
+        burger.classList.toggle('burger-active')
+        body.classList.toggle('fixed-body')
+    })
+}
+
+toggleMobileMenu()
+
+const toggleSubmenuItem = () => {
+    const items = document.querySelectorAll('.mobile-menu-item')
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            if (item.children.length > 1) {
+                item.classList.toggle('mobile-subitems-active')
+            }
+            else {
+                return
+            }
+        })
+    })
+}
+
+toggleSubmenuItem()
+var swiper = new Swiper(".mySwiperTrust", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
