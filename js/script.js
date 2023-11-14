@@ -154,6 +154,36 @@ const checkOffsetTop = () => {
 }
 
 checkOffsetTop()
+const toggleMobileMenu = () => {
+    const burger = document.querySelector('.burger')
+    const mobileMenu = document.querySelector('.mobile-menu')
+    const body = document.body
+
+    burger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('mobile-menu-active')
+        burger.classList.toggle('burger-active')
+        body.classList.toggle('fixed-body')
+    })
+}
+
+toggleMobileMenu()
+
+const toggleSubmenuItem = () => {
+    const items = document.querySelectorAll('.mobile-menu-item')
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            if (item.children.length > 1) {
+                item.classList.toggle('mobile-subitems-active')
+            }
+            else {
+                return
+            }
+        })
+    })
+}
+
+toggleSubmenuItem()
 const toggleModal = () => {
     let modal = document.querySelector('.dialog')
     let callbackBtn = document.querySelector('.block-menu-number')
@@ -208,36 +238,6 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
-const toggleMobileMenu = () => {
-    const burger = document.querySelector('.burger')
-    const mobileMenu = document.querySelector('.mobile-menu')
-    const body = document.body
-
-    burger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('mobile-menu-active')
-        burger.classList.toggle('burger-active')
-        body.classList.toggle('fixed-body')
-    })
-}
-
-toggleMobileMenu()
-
-const toggleSubmenuItem = () => {
-    const items = document.querySelectorAll('.mobile-menu-item')
-
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            if (item.children.length > 1) {
-                item.classList.toggle('mobile-subitems-active')
-            }
-            else {
-                return
-            }
-        })
-    })
-}
-
-toggleSubmenuItem()
 $('.news-tab-item').click(function(){
     var tab_id = $(this).attr('data-tab');
     let textBtn = $('.news-all span')
@@ -351,47 +351,6 @@ var swiper = new Swiper(".mySwiperPopularCard", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-  slidesPerView: 2,
-  spaceBetween: 15,
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      540: {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-      },
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
 var swiper = new Swiper(".mySwiperSolutions", {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -439,3 +398,44 @@ var swiper = new Swiper(".mySwiperTrust", {
         },
       },
   });
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+  slidesPerView: 2,
+  spaceBetween: 15,
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+      },
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
