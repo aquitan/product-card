@@ -364,28 +364,6 @@ var swiper = new Swiper(".mySwiperObjects", {
 
 
 })
-var swiper = new Swiper(".mySwiperSolutions", {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 9,
-        spaceBetween: 50,
-      },
-    },
-  });
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -447,6 +425,28 @@ var swiper = new Swiper(".mySwiperPopularCard", {
           rows: 2,
           fill: "row",
         },
+      },
+    },
+  });
+var swiper = new Swiper(".mySwiperSolutions", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 9,
+        spaceBetween: 50,
       },
     },
   });
