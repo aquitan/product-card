@@ -255,6 +255,47 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+  slidesPerView: 2,
+  spaceBetween: 15,
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+      },
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
 $('.news-tab-item').click(function(){
     var tab_id = $(this).attr('data-tab');
     let textBtn = $('.news-all span')
@@ -306,64 +347,23 @@ var swiper = new Swiper(".mySwiperNews", {
   });
 
 
-  const countTitleSymbols = () => {
-    const titles = document.querySelectorAll('.news-item-title')
+  // const countTitleSymbols = () => {
+  //   const titles = document.querySelectorAll('.news-item-title')
     
 
-    titles.forEach(title => {
-      if (title.innerText.length > 60) {
+  //   titles.forEach(title => {
+  //     if (title.innerText.length > 60) {
 
-        if (title.nextElementSibling) {
-          title.nextElementSibling.classList.add('news-shorten')
-        }
+  //       if (title.nextElementSibling) {
+  //         title.nextElementSibling.classList.add('news-shorten')
+  //       }
         
-      }
-    })
+  //     }
+  //   })
     
-  }
+  // }
 
-  countTitleSymbols()
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-  slidesPerView: 2,
-  spaceBetween: 15,
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      540: {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-      },
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
+  // countTitleSymbols()
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -373,9 +373,13 @@ var swiper = new Swiper(".mySwiperPopularCard", {
 
   var swiper = new Swiper(".mySwiperPopular", {
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination-main",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       600: {
@@ -417,6 +421,7 @@ var swiper = new Swiper(".mySwiperPopularCard", {
           rows: 2,
           fill: "row",
         },
+        navigation: false,
       },
       1280: {
         slidesPerView: 4,
