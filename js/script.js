@@ -1,6 +1,3 @@
-var swiper = new Swiper(".mySwiperBanner", {
-  
-});
 $('.brand-switch').click(function(){
     var tab_id = $(this).attr('data-tab');
 
@@ -167,6 +164,74 @@ const checkOffsetTopMobile = () => {
 }
 
 checkOffsetTopMobile()
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+    let textBtn = $('.news-all span')
+
+    if ($(this).text() === 'блог') {
+      textBtn.text('посты')
+    }
+    if ($(this).text() === 'новости') {
+      textBtn.text('статьи')
+    }
+    if ($(this).text() === 'видео') {
+      textBtn.text('видео')
+    }
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      640: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+
+  // const countTitleSymbols = () => {
+  //   const titles = document.querySelectorAll('.news-item-title')
+    
+
+  //   titles.forEach(title => {
+  //     if (title.innerText.length > 60) {
+
+  //       if (title.nextElementSibling) {
+  //         title.nextElementSibling.classList.add('news-shorten')
+  //       }
+        
+  //     }
+  //   })
+    
+  // }
+
+  // countTitleSymbols()
 const toggleMobileMenu = () => {
     const burger = document.querySelectorAll('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -296,74 +361,6 @@ var swiper = new Swiper(".mySwiperObjects", {
 
 
 })
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-    let textBtn = $('.news-all span')
-
-    if ($(this).text() === 'блог') {
-      textBtn.text('посты')
-    }
-    if ($(this).text() === 'новости') {
-      textBtn.text('статьи')
-    }
-    if ($(this).text() === 'видео') {
-      textBtn.text('видео')
-    }
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-
-  // const countTitleSymbols = () => {
-  //   const titles = document.querySelectorAll('.news-item-title')
-    
-
-  //   titles.forEach(title => {
-  //     if (title.innerText.length > 60) {
-
-  //       if (title.nextElementSibling) {
-  //         title.nextElementSibling.classList.add('news-shorten')
-  //       }
-        
-  //     }
-  //   })
-    
-  // }
-
-  // countTitleSymbols()
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -433,6 +430,31 @@ var swiper = new Swiper(".mySwiperPopularCard", {
       },
     },
   });
+var swiper = new Swiper(".mySwiperTrust", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+      },
+  });
 var swiper = new Swiper(".mySwiperSolutions", {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -455,28 +477,6 @@ var swiper = new Swiper(".mySwiperSolutions", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: 7,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 7,
-          spaceBetween: 40,
-        },
-      },
-  });
+var swiper = new Swiper(".mySwiperBanner", {
+  
+});
