@@ -1,12 +1,12 @@
-$('.brand-switch').click(function(){
-    var tab_id = $(this).attr('data-tab');
+// $('.brand-switch').click(function(){
+//     var tab_id = $(this).attr('data-tab');
 
-    $('.brand-switch').removeClass('current-brand');
-    $('.brand-content').removeClass('current-brand');
+//     $('.brand-switch').removeClass('current-brand');
+//     $('.brand-content').removeClass('current-brand');
 
-    $(this).addClass('current-brand');
-    $("#"+tab_id).addClass('current-brand');
-})
+//     $(this).addClass('current-brand');
+//     $("#"+tab_id).addClass('current-brand');
+// })
 
 var swiper = new Swiper(".mySwiperBrands", {
     slidesPerView: 'auto',
@@ -21,15 +21,19 @@ var swiper = new Swiper(".mySwiperBrands", {
       },
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 2,
         spaceBetween: 20,
       },
     },
@@ -164,74 +168,6 @@ const checkOffsetTopMobile = () => {
 }
 
 checkOffsetTopMobile()
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-    let textBtn = $('.news-all span')
-
-    if ($(this).text() === 'блог') {
-      textBtn.text('посты')
-    }
-    if ($(this).text() === 'новости') {
-      textBtn.text('статьи')
-    }
-    if ($(this).text() === 'видео') {
-      textBtn.text('видео')
-    }
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-
-  // const countTitleSymbols = () => {
-  //   const titles = document.querySelectorAll('.news-item-title')
-    
-
-  //   titles.forEach(title => {
-  //     if (title.innerText.length > 60) {
-
-  //       if (title.nextElementSibling) {
-  //         title.nextElementSibling.classList.add('news-shorten')
-  //       }
-        
-  //     }
-  //   })
-    
-  // }
-
-  // countTitleSymbols()
 const toggleMobileMenu = () => {
     const burger = document.querySelectorAll('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -266,6 +202,138 @@ const toggleSubmenuItem = () => {
 }
 
 toggleSubmenuItem()
+var swiper = new Swiper(".mySwiperObjects", {
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+  slidesPerView: 2,
+  spaceBetween: 20,
+	navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      820: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  $('.object-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.object-tab').removeClass('object-current-tab');
+    $('.object-tab-content').removeClass('object-current-tab');
+
+    $(this).addClass('object-current-tab');
+    $("#"+tab_id).addClass('object-current-tab');
+
+
+})
+$('.news-tab-item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+    let textBtn = $('.news-all span')
+
+    if ($(this).text() === 'блог') {
+      textBtn.text('посты')
+    }
+    if ($(this).text() === 'новости') {
+      textBtn.text('статьи')
+    }
+    if ($(this).text() === 'видео') {
+      textBtn.text('видео')
+    }
+
+    $('.news-tab-item').removeClass('current-tab');
+    $('.news-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+})
+
+var swiper = new Swiper(".mySwiperNews", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+    breakpoints: {
+      520: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      820: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+
+  // const countTitleSymbols = () => {
+  //   const titles = document.querySelectorAll('.news-item-title')
+    
+
+  //   titles.forEach(title => {
+  //     if (title.innerText.length > 60) {
+
+  //       if (title.nextElementSibling) {
+  //         title.nextElementSibling.classList.add('news-shorten')
+  //       }
+        
+  //     }
+  //   })
+    
+  // }
+
+  // countTitleSymbols()
+var swiper = new Swiper(".mySwiperBanner", {
+  
+});
 const toggleModal = () => {
     let modal = document.querySelector('.dialog')
     let callbackBtn = document.querySelector('.block-menu-number')
@@ -320,47 +388,6 @@ const togleModalTimePicker = (hide = false) => {
 }
 
 togleModalTimePicker()
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-  slidesPerView: 2,
-  spaceBetween: 15,
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      540: {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-      },
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-  });
-
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
 var swiper = new Swiper(".mySwiperPopularCard", {
     pagination: {
       el: ".swiper-pagination",
@@ -430,31 +457,7 @@ var swiper = new Swiper(".mySwiperPopularCard", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-      },
-  });
+
 var swiper = new Swiper(".mySwiperSolutions", {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -477,6 +480,28 @@ var swiper = new Swiper(".mySwiperSolutions", {
       },
     },
   });
-var swiper = new Swiper(".mySwiperBanner", {
-  
-});
+var swiper = new Swiper(".mySwiperTrust", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      },
+  });

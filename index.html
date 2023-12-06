@@ -8,8 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -1367,7 +1366,7 @@
 
     </div>
 </section>
-		<section class="section-block section-space transparrent">
+        <section class="section-block section-space section-ready transparrent">
     <div class="heading-link">
       <h2 class="section-header">
         Готовые решения
@@ -1494,12 +1493,14 @@
 			</div>
 		</div>
 
-		<div class="ready-solutions-item">
+        <div class="ready-solutions-item ready-all">
 			<a class="ready-solutions-all" href="#">
 				Все готовые<br/> решения
 			</a>
 		</div>
-
+        <div class="section-all-wrap ready-all-mobile">
+            <a class="section-all-btn" href="">ко всем решениям</a>
+        </div>
 
 	</div>
 
@@ -1557,7 +1558,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     <div class="solutions-slogan">
         <span class="solution-quote-left">
             <img src="./img/quotes.svg" alt="">
@@ -1568,7 +1569,7 @@
         <span class="solution-quote-right">
             <img src="./img/quotes.svg" alt="">
         </span>
-        </div>
+    </div>
 </section>
 		<section class="section-block news-section transparrent">
     <div class="news-tabs">
@@ -1579,78 +1580,142 @@
 
     <div class="news-content-wrap">
         <div id="news" class="news-tabs-content current-tab">
-			<div class="news-block-item">
-				<a href="#">
-                    <img src="./img/news-banner-1.png" alt="">
-					<div class="news-item-info">
-						<div class="news-item-date">
-							01/12/2023
-						</div>
-						<div class="news-item-title">
-							Цепное масло Cargosil Chain для оборудования
-						</div>
-						<div class="news-item-description">
-							Синтетическое масло Cargosil Chain специально разработано для смазки цепных узлов промышленного
-							оборудования. Состав предотвращает повреждение и износ шарниров, втулок и других элементов приводных и
-							транспортировочных цепей.
-						</div>
-					</div>
-				</a>
-			</div>
-		
-			<div class="news-block-item">
-				<a href="#">
-                    <img src="./img/news-banner-2.png" alt="">
-					<div class="news-item-info">
-						<div class="news-item-date">
-							01/12/2023
-						</div>
-						<div class="news-item-title">
-							Гидроизоляция и ремонт кровли осенью и зимой
-						</div>
-						<div class="news-item-description">
-							Как известно, для эксплуатации любых зданий и сооружений необходима полноценная гидроизоляция —
-							своевременная защита всех конструктивных частей от воздействия воды. Любые строительные, утеплительные и
-							отделочные материалы без гидрозащиты теряют свои полезные свойства, и, со временем, попросту
-							разрушаются. Атмосферная и бытовая влажность воздуха, осадки, талые и грунтовые воды грозят сохранности
-							строений буквально со всех сторон. В первую очередь гидроизоляция требуется на крыше.
-						</div>
-					</div>
-				</a>
-			</div>
-		
-			<div class="news-block-item">
-				<a href="#">
-                    <img src="./img/news-banner-3.png" alt="">
-					<div class="news-item-info">
-						<div class="news-item-date">
-							01/12/2023
-						</div>
-						<div class="news-item-title">
-							Система для гидроизоляции арочных ангаров Elastomeric Systems
-						</div>
-						<div class="news-item-description">
-							Арочные ангары широко используются для хранения сельскохозяйственной продукции, организации ремонтных и
-							производственных цехов. Такие здания востребованы из-за высокой скорости строительства и сравнительно
-							низкой стоимости.
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="news-block-item">
-				<a class="news-item-all" href="#">
-					<div class="news-item-all__title">ВСЕ <span class="news-all">НОВОСТИ</span></div>
-					<div class="news-item-all__btn">
-						<span class="news-all-btn__text">в раздел</span>
-						<span class="news-all-btn__arrow">
-							<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-								<path d="M1.875 1.90942L6.28537 5.95912L1.9461 10.0909" stroke="#707070" stroke-width="2" stroke-linecap="round" />
-							</svg>
-						</span>
-					</div>
-				</a>
-			</div>
-        </div>
+            <div class="mySwiperNews">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-block-item">
+                            <a href="#">
+                                <img src="./img/news-banner-1.png" alt="">
+                                <div class="news-item-info">
+                                    <div class="news-item-date">
+                                        01/12/2023
+                                    </div>
+                                    <div class="news-item-title">
+                                        Цепное масло Cargosil Chain для оборудования
+                                    </div>
+                                    <div class="news-item-description">
+                                        Синтетическое масло Cargosil Chain специально разработано для смазки цепных узлов промышленного
+                                        оборудования. Состав предотвращает повреждение и износ шарниров, втулок и других элементов приводных и
+                                        транспортировочных цепей.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="news-block-item">
+                            <a href="#">
+                                <img src="./img/news-banner-2.png" alt="">
+                                <div class="news-item-info">
+                                    <div class="news-item-date">
+                                        01/12/2023
+                                    </div>
+                                    <div class="news-item-title">
+                                        Гидроизоляция и ремонт кровли осенью и зимой
+                                    </div>
+                                    <div class="news-item-description">
+                                        Как известно, для эксплуатации любых зданий и сооружений необходима полноценная гидроизоляция —
+                                        своевременная защита всех конструктивных частей от воздействия воды. Любые строительные, утеплительные и
+                                        отделочные материалы без гидрозащиты теряют свои полезные свойства, и, со временем, попросту
+                                        разрушаются. Атмосферная и бытовая влажность воздуха, осадки, талые и грунтовые воды грозят сохранности
+                                        строений буквально со всех сторон. В первую очередь гидроизоляция требуется на крыше.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="news-block-item">
+                            <a href="#">
+                                <img src="./img/news-banner-3.png" alt="">
+                                <div class="news-item-info">
+                                    <div class="news-item-date">
+                                        01/12/2023
+                                    </div>
+                                    <div class="news-item-title">
+                                        Система для гидроизоляции арочных ангаров Elastomeric Systems
+                                    </div>
+                                    <div class="news-item-description">
+                                        Арочные ангары широко используются для хранения сельскохозяйственной продукции, организации ремонтных и
+                                        производственных цехов. Такие здания востребованы из-за высокой скорости строительства и сравнительно
+                                        низкой стоимости.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="news-block-item">
+                            <a class="news-item-all" href="#">
+                                <div class="news-item-all__title">ВСЕ <span class="news-all">НОВОСТИ</span></div>
+                                <div class="news-item-all__btn">
+                                    <span class="news-all-btn__text">в раздел</span>
+                                    <span class="news-all-btn__arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                                            <path d="M1.875 1.90942L6.28537 5.95912L1.9461 10.0909" stroke="#707070" stroke-width="2" stroke-linecap="round" />
+                                            </svg>
+                                            </span>
+                                            </div>
+                                            </a>
+                                            </div>
+                                            </div>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <g filter="url(#filter0_d_852_1284)">
+                            <circle cx="17" cy="17" r="13" fill="white" />
+                        </g>
+                        <path d="M15 13.0405L20 17.5405L15 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <filter id="filter0_d_852_1284" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="2" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1284" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1284" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <g filter="url(#filter0_d_852_1287)">
+                            <circle cx="13" cy="13" r="13" transform="matrix(-1 0 0 1 30 4)" fill="white" />
+                        </g>
+                        <path d="M19 13.0405L14 17.5405L19 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <filter id="filter0_d_852_1287" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="2" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1287" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1287" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+                </div>
+                
+                
+                
+                
+                
+                
+                </div>
 
         <div id="blog" class="news-tabs-content">
 			<div class="news-block-item">
@@ -1810,7 +1875,8 @@
                     stroke-linecap="round"></path>
             </svg>
         </a>
-        </div>
+    </div>
+    
     <div class="objects-wrapper">
         <div class="mySwiperObjects">
             <div class="swiper-wrapper">
@@ -1820,9 +1886,11 @@
                         <img src="./img/gidroizolyaciya_svov_arochnogo_angara_elastomeric.png" alt="">
                 
                         <div class="objects-item-description">
+                            
                             <div class="objects-description-wrap">
                                 <div class="objects-item-title">Гидроизоляция швов арочного ангара</div>
                                 <div class="objects-description-info">
+                                    
                                     
                                     <div class="objects-description-row">
                                         <span>Использовано систем:</span>
@@ -1847,6 +1915,7 @@
                         <img src="./img/gidroizolyaciya_kupola_iz_stekla_v_kazahstane.jpeg" alt="">
                 
                         <div class="objects-item-description">
+                            
                             <div class="objects-description-wrap">
                                 <div class="objects-item-title">Гидроизоляция галлерей и стеклянных конструкций</div>
                                 <div class="objects-description-info">
@@ -1859,27 +1928,28 @@
                                         <span>Использовано материалов:</span>
                                         <span>3</span>
                                     </div>
-                                    </div>
-                                    </div>
-                                    <div class="objects-description-btn">
-                                        <a href="#" class="objects-btn">смотреть результат</a>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
                                     
-                                    <div class="swiper-slide">
-                                        <div class="objects-item">
-                                            <img src="https://elastomeric.ru/upload/iblock/cb6/lfsqx8cc4v55tyxgj52s324o4dvm9gki/gidroizolyaci_zhidkaya_holodnogo_naneseniya_elastomerik_sistems.jpg"
-                                                alt="">
+                                </div>
+                                </div>
+                                <div class="objects-description-btn">
+                                    <a href="#" class="objects-btn">смотреть результат</a>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="objects-item">
+                        <img src="https://elastomeric.ru/upload/iblock/cb6/lfsqx8cc4v55tyxgj52s324o4dvm9gki/gidroizolyaci_zhidkaya_holodnogo_naneseniya_elastomerik_sistems.jpg"
+                            alt="">
+                        
+                        <div class="objects-item-description">
+                        
+                            <div class="objects-description-wrap">
+                                <div class="objects-item-title">Научно-исследовательск-ий и конструкторский институт энерготехники им. Н.А. Доллежаля
+                                </div>
+                                <div class="objects-description-info">
                                     
-                                            <div class="objects-item-description">
-                                    
-                                                <div class="objects-description-wrap">
-                                                    <div class="objects-item-title">Научно-исследовательск-ий и конструкторский институт энерготехники им.
-                                                        Н.А. Доллежаля
-                                                    </div>
-                                                    <div class="objects-description-info">
                                     <div class="objects-description-row">
                                         <span>Использовано систем:</span>
                                         <span>1</span>
@@ -1888,8 +1958,9 @@
                                         <span>Использовано материалов:</span>
                                         <span>3</span>
                                     </div>
-                                    </div>
-                                    </div>
+                                    
+                                </div>
+                                </div>
                             <div class="objects-description-btn">
                                 <a href="#" class="objects-btn">смотреть результат</a>
                             </div>
@@ -1914,8 +1985,9 @@
                                         <span>Использовано материалов:</span>
                                         <span>3</span>
                                     </div>
-                                    </div>
-                                    </div>
+                                    
+                                </div>
+                                </div>
                             <div class="objects-description-btn">
                                 <a href="#" class="objects-btn">смотреть результат</a>
                             </div>
@@ -1926,6 +1998,7 @@
                 <div class="swiper-slide">
                     <div class="objects-item">
                         <img src="./img/gidroizolyaciya_svov_arochnogo_angara_elastomeric.png" alt="">
+                
                         <div class="objects-item-description">
                 
                             <div class="objects-description-wrap">
@@ -1940,8 +2013,9 @@
                                         <span>Использовано материалов:</span>
                                         <span>3</span>
                                     </div>
-                </div>
-                </div>
+                
+                                </div>
+                                </div>
                             <div class="objects-description-btn">
                                 <a href="#" class="objects-btn">смотреть результат</a>
                             </div>
@@ -1952,6 +2026,7 @@
                 <div class="swiper-slide">
                     <div class="objects-item">
                         <img src="./img/gidroizolyaciya_svov_arochnogo_angara_elastomeric.png" alt="">
+                
                         <div class="objects-item-description">
                 
                             <div class="objects-description-wrap">
@@ -1965,17 +2040,18 @@
                                     <div class="objects-description-row">
                                         <span>Использовано материалов:</span>
                                         <span>3</span>
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                        <div class="objects-description-btn">
+                                    </div>
+                                    
+                                    </div>
+                                    </div>
+                                    <div class="objects-description-btn">
                                 <a href="#" class="objects-btn">смотреть результат</a>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                
               </div>
             <div class="swiper-button-next">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -2021,13 +2097,17 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
+    <div class="section-all-wrap">
+        <a class="section-all-btn" href="">все объекты</a>
+    </div>
     
 </section>
 		<section class="section-block trust-section transparrent">
-<div class="heading-link">
-    <h2 class="section-header">
-        Нам Доверяют
-    </h2>
+
+    <div class="heading-link">
+        <h2 class="section-header">
+            Нам Доверяют
+        </h2>
     </div>
     
     <div class="mySwiperTrust">
@@ -2038,19 +2118,21 @@
                     <div class="trust-img">
                         <img class="trust-item-color" src="./img/coolroof-color.svg" alt="">
                         <img class="trust-item-grey" src="./img/coolroof-grey.svg" alt="">
-                        </div>
+                    </div>
                     <div class="trust-item-inner">
                         <div class="trust-title">
                             Название компании
                         </div>
                         <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do
                             eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation
                             ullamco laboris
                             nisi ut aliquip ex ea commodo
                         </div>
-                
+        
                     </div>
                     <div class="trust-details">
                         <div class="trust-watch">
@@ -2058,246 +2140,247 @@
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
                             <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/agro-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/agro-grey.svg" alt="">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/efko-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/efko-grey.svg" alt="">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                    
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-            
-            <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/stars-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/stars-grey.svg" alt="">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                    
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/ntek-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/ntek-grey.svg">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                    
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/nfm-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/nfm-grey.svg" alt="">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                    
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                <div class="trust-item">
-                    <div class="trust-img">
-                        <img class="trust-item-color" src="./img/techno-color.svg" alt="">
-                        <img class="trust-item-grey" src="./img/techno-grey.svg" alt="">
-                        </div>
-                    <div class="trust-item-inner">
-                        <div class="trust-title">
-                            Название компании
-                        </div>
-                        <div class="trust-text">
-                            Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo
-                        </div>
-                    
-                    </div>
-                    <div class="trust-details">
-                        <div class="trust-watch">
-                            посмотреть
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
-                            <path
-                                d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
-                        </svg>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="swiper-button-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                            <g filter="url(#filter0_d_852_1284)">
-                                <circle cx="17" cy="17" r="13" fill="white" />
-                            </g>
-                            <path d="M15 13.0405L20 17.5405L15 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
-                            <defs>
-                                <filter id="filter0_d_852_1284" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
-                                    color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha" />
-                                    <feOffset />
-                                    <feGaussianBlur stdDeviation="2" />
-                                    <feComposite in2="hardAlpha" operator="out" />
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1284" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1284" result="shape" />
-                                </filter>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                            <g filter="url(#filter0_d_852_1287)">
-                                <circle cx="13" cy="13" r="13" transform="matrix(-1 0 0 1 30 4)" fill="white" />
-                            </g>
-                            <path d="M19 13.0405L14 17.5405L19 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
-                            <defs>
-                                <filter id="filter0_d_852_1287" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
-                                    color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha" />
-                                    <feOffset />
-                                    <feGaussianBlur stdDeviation="2" />
-                                    <feComposite in2="hardAlpha" operator="out" />
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1287" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1287" result="shape" />
-                                </filter>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="swiper-pagination"></div>
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z"
+								 />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/agro-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/agro-grey.svg" alt="">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+				
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/efko-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/efko-grey.svg" alt="">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+				
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/stars-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/stars-grey.svg" alt="">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+					
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/ntek-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/ntek-grey.svg">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+					
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/nfm-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/nfm-grey.svg" alt="">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+					
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="trust-item">
+					<div class="trust-img">
+						<img class="trust-item-color" src="./img/techno-color.svg" alt="">
+						<img class="trust-item-grey" src="./img/techno-grey.svg" alt="">
+					</div>
+					<div class="trust-item-inner">
+						<div class="trust-title">
+							Название компании
+						</div>
+						<div class="trust-text">
+							Краткое содержанее благодарственного письма Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris
+							nisi ut aliquip ex ea commodo
+						</div>
+					
+					</div>
+					<div class="trust-details">
+						<div class="trust-watch">
+							посмотреть
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="#707070">
+							<path
+								d="M0.283207 7.05929C1.12595 5.74779 5.41454 0 11 0C16.5842 0 20.874 5.74771 21.7168 7.05929L22 7.5L21.7168 7.94071C20.874 9.25221 16.5855 15 11 15C5.41578 15 1.12604 9.25233 0.283207 7.94071L0 7.5L0.283207 7.05929ZM11 13.3333C15.3328 13.3333 18.9003 8.92692 19.9421 7.49933C18.9023 6.07058 15.3439 1.66667 11 1.66667C6.6675 1.66667 3.10015 6.07246 2.05786 7.50067C3.09775 8.92946 6.65612 13.3333 11 13.3333ZM11 3.33333C13.3693 3.33333 15.2969 5.2025 15.2969 7.5C15.2969 9.7975 13.3693 11.6667 11 11.6667C8.63066 11.6667 6.70312 9.7975 6.70312 7.5C6.70312 5.2025 8.63066 3.33333 11 3.33333ZM11 10C12.4216 10 13.5781 8.8785 13.5781 7.5C13.5781 6.1215 12.4216 5 11 5C9.57842 5 8.42188 6.1215 8.42188 7.5C8.42188 8.8785 9.57842 10 11 10Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper-button-next">
+			<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+				<g filter="url(#filter0_d_852_1284)">
+					<circle cx="17" cy="17" r="13" fill="white" />
+				</g>
+				<path d="M15 13.0405L20 17.5405L15 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
+				<defs>
+					<filter id="filter0_d_852_1284" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
+						color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix" />
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+							result="hardAlpha" />
+						<feOffset />
+						<feGaussianBlur stdDeviation="2" />
+						<feComposite in2="hardAlpha" operator="out" />
+						<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1284" />
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1284" result="shape" />
+					</filter>
+				</defs>
+			</svg>
+		</div>
+		<div class="swiper-button-prev">
+			<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+				<g filter="url(#filter0_d_852_1287)">
+					<circle cx="13" cy="13" r="13" transform="matrix(-1 0 0 1 30 4)" fill="white" />
+				</g>
+				<path d="M19 13.0405L14 17.5405L19 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round" />
+				<defs>
+					<filter id="filter0_d_852_1287" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
+						color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix" />
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+							result="hardAlpha" />
+						<feOffset />
+						<feGaussianBlur stdDeviation="2" />
+						<feComposite in2="hardAlpha" operator="out" />
+						<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1287" />
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1287" result="shape" />
+					</filter>
+				</defs>
+			</svg>
+		</div>
+		<div class="swiper-pagination"></div>
 	</div>
     
     
@@ -2312,7 +2395,18 @@
 	
 </section> -->
 		<section class="section-block gallery-section transparrent">
-    <h2 class="gallery-h2">Галерея</h2>
+    <div class="heading-link">
+        <h2 class="section-header">
+            Галерея
+        </h2>
+        <a href="#">
+            <span>в раздел</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                <path d="M1.87305 1.90942L6.28342 5.95912L1.94415 10.0909" stroke="#707070" stroke-width="2"
+                    stroke-linecap="round"></path>
+            </svg>
+        </a>
+    </div>
     <div class="gallery-wrap">
       <div id="item-0" class="gallery-item">
         <img src="./img/gallery-1.jpg" alt="">
@@ -2336,11 +2430,7 @@
         <img src="./img/gallery-7.jpg" alt="">
       </div>
     </div>
-    <div class="gallery-all-wrap">
-      <a href="" class="gallery-all">
-        В галерею
-      </a>
-    </div>
+
 </section>
 <!-- 
 <section class="section-block gallery-mobile mobile transparrent">
@@ -2387,300 +2477,142 @@
   
 </section> -->
 		<section class="section-block brands-section transparrent">
+    <div class="heading-link">
+        <h2 class="section-header">
+            Наши Бренды
+        </h2>
+        <a href="#">
+            <span>в раздел</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                <path d="M1.87305 1.90942L6.28342 5.95912L1.94415 10.0909" stroke="#707070" stroke-width="2"
+                    stroke-linecap="round"></path>
+            </svg>
+        </a>
+    </div>
     <div class="brands-inner">
-        <div class="brands-switcher">
-            <div data-tab="cargosil" class="brand-switch brand-cargosil current-brand">
-                <img src="./img/cargosil-brand-logo.png" alt="">
-            </div>
-            <div data-tab="adhesol" class="brand-switch brand-adhesol">
-                <img src="./img/adhesol-brand-logo.png" alt="">
-            </div>
-        </div>
-
-        <div class="brands-content">
-            <h2 class="brands-h2">НАШИ БРЕНДЫ</h2>
-            <div id="cargosil" class="brand-content current-brand">
-                <div class="brand-info">
-                    <div class="brand-info-content">
-                        <div class="brand-title">CARGOSIL</div>
-                        <div class="brand-info-text">
-                            CARGOSIL – это российский бренд автомобильной химии. Торговая марка принадлежит компании «Эластомерик Системс», которая специализируется на производстве полимерных гидроизоляционных составов и клеев.
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="brand-btn">подробнее</a>
+        <div class="brands-item-wrap">
+            <div class="brands-item">
+                <div class="brands-item-img">
+                    <img src="./img/cargosil-logo-3.png" alt="">
                 </div>
-
-                <div class="brand-slider">
+                <div class="brands-item-desc">
+                    CARGOSIL – это российский бренд автомобильной химии. Торговая марка принадлежит компании «Эластомерик Системс»,
+                    которая
+                    специализируется на производстве полимерных гидроизоляционных составов и клеев.
+                </div>
+                <div class="brands-item-slider">
                     <div class="mySwiperBrands">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/Сargosil_Black_Shine_gelv_chernitelo_shin_vysokostojkij_.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-info">
-                                            <div class="brand-slide-title">
-                                                Чернитель для шин, резины, покрышек CARGOSIL BLACK SHINE
-                                            </div>
-                                            <div class="brand-slide-price">
-                                                439 ₽
-                                                <img class="brand-slide-btn" src="./img/brand-slider-btn.svg" alt="">
-                                            </div>
-                                        </div>
-                                        
+                                <div class="brands-slider-item">
+                                    <div class="brands-slider-img">
+                                        <img src="./img/cargosil-s_gidroizolyaciya.png" alt="">
                                     </div>
-                                </a>
+                                    <div class="brands-slider-title">
+                                        Cargosil Зимний - жидкая резина для устранения протечек на крышах фургонов и будок, ремонта
+                                        жестких будок и тентов
+                                    </div>
+                                    <div class="brands-slider-buy">
+                                        <div class="brands-slider-price">
+                                            2 175 ₽
+                                        </div>
+                                        <a href="#" class="brands-slider-btn">
+                                            подробнее
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-    
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/cargosil-s_gidroizolyaciya.png" alt="">
-                                        </div>
-                                        <div class="brand-slide-info">
-                                            <div class="brand-slide-title">
-                                                Cargosil S - летняя жидкая резина для устранения протечек на крышах фургонов и будок, ремонта жестких будок
-                                            </div>
-                                            <div class="brand-slide-price">
-                                                2 175 ₽
-                                                <img class="brand-slide-btn" src="./img/brand-slider-btn.svg" alt="">
-                                            </div>
-                                        </div>
-                                        
+                                <div class="brands-slider-item">
+                                    <div class="brands-slider-img">
+                                        <img src="https://elastomeric.ru/upload/iblock/306/spzowlg7za50zihe7yxw2xrzxyi8x0kj/%D0%A1argosil_Black_Shine_gelv_chernitelo_shin_vysokostojkij_.jpg"
+                                            alt="">
                                     </div>
-                                </a>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/PAG46_sinteticheskoe_maslo_dlya_mobilpnyh_i_holodilunyh_mashin_kargosil.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-info">
-                                            <div class="brand-slide-title">
-                                                Синтетическое масло для автомобильных и холодильных компрессоров CARGOSIL PAG46
-                                            </div>
-                                            <div class="brand-slide-price">
-                                                599 ₽
-                                                <img class="brand-slide-btn" src="./img/brand-slider-btn.svg" alt="">
-                                            </div>
-                                        </div>
-                                        
+                                    <div class="brands-slider-title">
+                                        Чернитель для шин, резины, покрышек CARGOSIL BLACK SHINE
                                     </div>
-                                </a>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/CHF_premialdnoe_maslo_dlya_gur_i_cgs_kargosil.jpg" alt="">
+                                    <div class="brands-slider-buy">
+                                        <div class="brands-slider-price">
+                                            439 ₽
                                         </div>
-                                        <div class="brand-slide-info">
-                                            <div class="brand-slide-title">
-                                                Премиальное масло для усилителей рулевого управления и централизованных гидравлических систем CARGOSIL CHF
-                                            </div>
-                                            <div class="brand-slide-price">
-                                                517 ₽
-                                                <img class="brand-slide-btn" src="./img/brand-slider-btn.svg" alt="">
-                                            </div>
+                                        <a href="#" class="brands-slider-btn">
+                                            подробнее
+                                        </a>
                                         </div>
-                                        
-                                    </div>
-                                </a>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <a  href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/brand-slide-img.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-info">
-                                            <div class="brand-slide-title">
-                                                Многофункциональный смазочный материал CARGOSIL WD40
-                                            </div>
-                                            <div class="brand-slide-price">
-                                                599 ₽
-                                                <img class="brand-slide-btn" src="./img/brand-slider-btn.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                                </div>
+            
                         </div>
-                        <div class="swiper-button-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                                <g filter="url(#filter0_d_852_1284)">
-                                  <circle cx="17" cy="17" r="13" fill="white"/>
-                                </g>
-                                <path d="M15 13.0405L20 17.5405L15 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round"/>
-                                <defs>
-                                  <filter id="filter0_d_852_1284" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset/>
-                                    <feGaussianBlur stdDeviation="2"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1284"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1284" result="shape"/>
-                                  </filter>
-                                </defs>
-                              </svg>
                         </div>
-                        <div class="swiper-button-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                                <g filter="url(#filter0_d_852_1287)">
-                                  <circle cx="13" cy="13" r="13" transform="matrix(-1 0 0 1 30 4)" fill="white"/>
-                                </g>
-                                <path d="M19 13.0405L14 17.5405L19 22.0405" stroke="#707070" stroke-width="2" stroke-linecap="round"/>
-                                <defs>
-                                  <filter id="filter0_d_852_1287" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset/>
-                                    <feGaussianBlur stdDeviation="2"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_1287"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_1287" result="shape"/>
-                                  </filter>
-                                </defs>
-                              </svg>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
                 </div>
-                
             </div>
+<div class="section-all-wrap brands-all-wrap">
+    <a class="section-all-btn" href="">на сайт</a>
+</div>
+</div>
 
-            <div id="adhesol" class="brand-content">
-                <div class="brand-info">
-                    <div class="brand-info-content">
-                        <div class="brand-title">ADHESOL</div>
-                        <div class="brand-info-text">
-                            ADHESOL – это один из проектов отечественной компании "ООО Эластомерик Системс". Предприятие существует с 2014 года. Имеет собственную научно-исследовательскую и производственную базу, расположенную в городе Липецке.
-                        </div>
-                    </div>
-                    <a href="#" class="brand-btn">подробнее</a>
+
+        <div class="brands-item-wrap">
+            <div class="brands-item brands-adhesol">
+                <div class="brands-item-img">
+                    <img src="./img/adhesol-logo-3.png" alt="">
                 </div>
-
-                <div class="brand-slider">
+                <div class="brands-item-desc">
+                    ADHESOL – это один из проектов отечественной компании "ООО Эластомерик Системс". Предприятие существует с 2014
+                    года.
+                    Имеет собственную научно-исследовательскую и производственную базу, расположенную в городе Липецке.
+                </div>
+                <div class="brands-item-slider">
                     <div class="mySwiperBrands">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/klej_cosmofen_epoxy_kosmofen_epoksidnaya_smola_loctite_otverditel__3m_epoksidnyj_dvuhkomponentnyj_gibridnyj_EDP_prozrachnyj_klej_kudo_tangit_super_klej_poksipol_universal_nyj_ultima_holodnaya_svarka_adhesol_adgezol_odnokomponentnyj_ADHESOL_.png"
-                                                alt="">
-                                        </div>
-                                        <div class="brand-slide-title">
-                                            Вибростойкий однокомпонентный эпоксидный клей ADHESOL ES 150 S
-                                        </div>
-                                        <div class="brand-slide-price">
+                                <div class="brands-slider-item">
+                                    <div class="brands-slider-img">
+                                        <img src="https://adhesol.ru/upload/iblock/6cb/b50gf9kjv5as8rx3jqww1vgo8o8u32hf/klej_cosmofen_epoxy_kosmofen_epoksidnaya_smola_loctite_otverditel__3m_epoksidnyj_dvuhkomponentnyj_gibridnyj_EDP_prozrachnyj_klej_kudo_tangit_super_klej_poksipol_universal_nyj_ultima_holodnaya_svarka_adhesol_adgezol_odnokomponentnyj_ADHESOL_.png"
+                                            alt="">
+                                    </div>
+                                    <div class="brands-slider-title">
+                                        ADHESOL ES 150 S Вибростойкий однокомпо-нентный эпоксидный клей
+                                    </div>
+                                    <div class="brands-slider-buy">
+                                        <div class="brands-slider-price">
                                             1 235 ₽
                                         </div>
-                                        <a href="" class="brand-slide-btn">
-                                            <img src="./img/brand-slider-btn.svg" alt="">
+                                        <a href="#" class="brands-slider-btn">
+                                            подробнее
                                         </a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-    
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/Bystrootverzhdaemyj_dvuhkomponentnyj_epoksidnyj_klej_nizkoj_vyazkosti_ADHESOL_ET_200_LV.webp" alt="">
-                                        </div>
-                                        <div class="brand-slide-title">
-                                            Быстроотверждаемый двухкомпонентный эпоксидный клей низкой вязкости ADHESOL ET 200 LV
-                                        </div>
-                                        <div class="brand-slide-price">
+                                <div class="brands-slider-item">
+                                    <div class="brands-slider-img">
+                                        <img src="https://adhesol.ru/upload/iblock/928/1ig5s73rrqujkab8yufqy0gnpoc2ouev/Bystrootverzhdaemyj_dvuhkomponentnyj_epoksidnyj_klej_nizkoj_vyazkosti_ADHESOL_ET_200_LV.webp"
+                                            alt="">
+                                    </div>
+                                    <div class="brands-slider-title">
+                                        Быстроотверждаемый двухкомпонентный эпоксидный клей низкой вязкости ADHESOL ET 200 LV
+                                    </div>
+                                    <div class="brands-slider-buy">
+                                        <div class="brands-slider-price">
                                             5 560 ₽
                                         </div>
-                                        <a href="" class="brand-slide-btn">
-                                            <img src="./img/brand-slider-btn.svg" alt="">
+                                        <a href="#" class="brands-slider-btn">
+                                            подробнее
                                         </a>
-                                    </div>
-                                </a>
+                                        </div>
+                                </div>
                             </div>
-    
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/ADHESOL_542_50ml.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-title">
-                                            Высокопрочный анаэробный клей для резьбовых соединений ADHESOL 542
-
-
-                                        </div>
-                                        <div class="brand-slide-price">
-                                            1 800 ₽
-                                        </div>
-                                        <a href="" class="brand-slide-btn">
-                                            <img src="./img/brand-slider-btn.svg" alt="">
-                                        </a>
-                                    </div>
-                                </a>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/brand-slide-img.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-title">
-                                            Универсальный многоцелевой эпоксидный клей ADHESOL 1000
-                                        </div>
-                                        <div class="brand-slide-price">
-                                            599 ₽
-                                        </div>
-                                        <a href="" class="brand-slide-btn">
-                                            <img src="./img/brand-slider-btn.svg" alt="">
-                                        </a>
-                                    </div>
-                                </a>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <div class="brand-slide">
-                                        <div class="brand-slide-img">
-                                            <img src="./img/brand-slide-img.jpg" alt="">
-                                        </div>
-                                        <div class="brand-slide-title">
-                                            Химостойкое эпоксидное покрытие для топливных баков самолетов 747 Coating
-                                        </div>
-                                        <div class="brand-slide-price">
-                                            599 ₽
-                                        </div>
-                                        <a href="" class="brand-slide-btn">
-                                            <img src="./img/brand-slider-btn.svg" alt="">
-                                        </a>
-                                    </div>
-                                </a>
-                            </div>
+            
+            
                         </div>
-                        
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
-
-                
+                </div>
+            <div class="section-all-wrap">
+                <a class="section-all-btn" href="">на сайт</a>
             </div>
-        </div>
+            </div>
     </div>
 </section>
 		<section class="section-block footer-section transparrent">
@@ -2757,7 +2689,7 @@
             </div>
         </div>
 
-        <div class="footer-top-col">
+        <div class="footer-top-col footer-top-phone">
             <div class="footer-top-title">Горячая линия</div>
             <div class="footer-top-text">закажи звонок</div>
             <div class="footer-number">
@@ -2842,7 +2774,7 @@
             </div>
             <div class="footer-col-item">
                 <div class="footer-rate">
-
+                    <img src="./img/yandex-mark.svg" alt="">
                 </div>
             </div>
         </div>
@@ -2948,18 +2880,10 @@
 	</main>
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript">
-		AOS.init()
-
-		
-	</script>
+    <script type="text/javascript" src="js/script.js"></script>
 	
 </body>
 
