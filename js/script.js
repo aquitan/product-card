@@ -1,97 +1,3 @@
-// $('.brand-switch').click(function(){
-//     var tab_id = $(this).attr('data-tab');
-
-//     $('.brand-switch').removeClass('current-brand');
-//     $('.brand-content').removeClass('current-brand');
-
-//     $(this).addClass('current-brand');
-//     $("#"+tab_id).addClass('current-brand');
-// })
-
-var swiper = new Swiper(".mySwiperBrands", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    breakpoints: {
-      640: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-let gallerySlider = null
-let mediaQuery = 1000
-
-const checkWindowWidth = () => {
-    $(window).on('load resize', function () {
-        // Берём текущую ширину экрана
-        let windowWidth = $(this).innerWidth();
-
-        console.log('windowWidth', windowWidth)
-        
-        // Если ширина экрана меньше или равна mediaQuerySize(1024)
-        if (windowWidth <= mediaQuery) {
-          // Инициализировать слайдер если он ещё не был инициализирован
-          initializeSlider()
-        } else {
-          // Уничтожить слайдер если он был инициализирован
-          sliderDestroy()
-        }
-      });
-}
-
-checkWindowWidth()
-
-const initializeSlider = () => {
-    console.log('swiper-init')
-    gallerySlider = new Swiper(".mySwiperGallery", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-        },
-      });
-}
-
-const sliderDestroy = () => {
-    console.log('swiper-destroy')
-    gallerySlider.destroy()
-}
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -168,6 +74,195 @@ const checkOffsetTopMobile = () => {
 }
 
 checkOffsetTopMobile()
+$('.item-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.item-tab').removeClass('current-tab');
+    $('.item-tabs-content').removeClass('current-tab');
+
+    $(this).addClass('current-tab');
+    $("#"+tab_id).addClass('current-tab');
+
+})
+
+$('.doc-tab').click(function(){
+    var tabData = $(this).attr('data-tab');
+
+    $('.doc-tab').removeClass('current-tab-doc');
+    $('.doc-tabs-content').removeClass('current-tab-doc');
+
+    $(this).addClass('current-tab-doc');
+    $("#"+tabData).addClass('current-tab-doc');
+
+})
+
+$('.comment-add').click(function(){
+    var tabData = $(this).attr('data-tab');
+
+    $('.comment-add').removeClass('current-tab-comment');
+    $('.comments-tab').removeClass('active-comments');
+
+    $(this).addClass('current-tab-comment');
+    $("#"+tabData).addClass('active-comments');
+
+})
+
+var swiper = new Swiper(".mySwiperApplicationObj", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+      800: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1280: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+  });
+
+  var swiper = new Swiper(".mySwiperItemComments", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".mySwiperItemArticles", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+const togleItemTimePicker = (hide = false) => {
+
+    const dateInput = document.querySelector('.item-callback-date')
+    const timeInput = document.querySelector('.item-callback-time')
+
+    dateInput.addEventListener('focus', () => {
+        dateInput.setAttribute('type', 'date')
+    })
+    timeInput.addEventListener('focus', () => {
+        timeInput.setAttribute('type', 'time')
+    })
+
+    if (hide) {
+        dateInput.setAttribute('type', 'text')
+        timeInput.setAttribute('type', 'text')
+    }
+
+}
+
+togleItemTimePicker()
+var swiper = new Swiper(".mySwiperBuyTogether", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+});
+
+var swiper = new Swiper(".mySwiperPopularCard", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  spaceBetween: 10
+});
 const toggleMobileMenu = () => {
     const burger = document.querySelectorAll('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -202,306 +297,154 @@ const toggleSubmenuItem = () => {
 }
 
 toggleSubmenuItem()
-var swiper = new Swiper(".mySwiperObjects", {
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-  slidesPerView: 2,
-  spaceBetween: 20,
-	navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      540: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      820: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-  });
+const toggleTabItem = () => {
+    const items = document.querySelectorAll('.mobile-tabs-title')
 
-  $('.object-tab').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.object-tab').removeClass('object-current-tab');
-    $('.object-tab-content').removeClass('object-current-tab');
-
-    $(this).addClass('object-current-tab');
-    $("#"+tab_id).addClass('object-current-tab');
-
-
-})
-$('.news-tab-item').click(function(){
-    var tab_id = $(this).attr('data-tab');
-    let textBtn = $('.news-all span')
-
-    if ($(this).text() === 'блог') {
-      textBtn.text('посты')
-    }
-    if ($(this).text() === 'новости') {
-      textBtn.text('статьи')
-    }
-    if ($(this).text() === 'видео') {
-      textBtn.text('видео')
-    }
-
-    $('.news-tab-item').removeClass('current-tab');
-    $('.news-tabs-content').removeClass('current-tab');
-
-    $(this).addClass('current-tab');
-    $("#"+tab_id).addClass('current-tab');
-
-})
-
-var swiper = new Swiper(".mySwiperNews", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-    breakpoints: {
-      520: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      820: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-
-  // const countTitleSymbols = () => {
-  //   const titles = document.querySelectorAll('.news-item-title')
-    
-
-  //   titles.forEach(title => {
-  //     if (title.innerText.length > 60) {
-
-  //       if (title.nextElementSibling) {
-  //         title.nextElementSibling.classList.add('news-shorten')
-  //       }
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            item.classList.toggle('active-acc')
+        })
         
-  //     }
-  //   })
-    
-  // }
-
-  // countTitleSymbols()
-var swiper = new Swiper(".mySwiperBanner", {
-  
-});
-const toggleModal = () => {
-    let modal = document.querySelector('.dialog')
-    let callbackBtn = document.querySelector('.block-menu-number')
-    let genCloseBtn = document.querySelector('.gen-modal-close')
-
-    callbackBtn.addEventListener('click', () => {
-        modal.showModal()
     })
-
-    modal.addEventListener("click", e => {
-        const dialogDimensions = modal.getBoundingClientRect()
-        if (
-          e.clientX < dialogDimensions.left ||
-          e.clientX > dialogDimensions.right ||
-          e.clientY < dialogDimensions.top ||
-          e.clientY > dialogDimensions.bottom
-        ) {
-          modal.close()
-          togleModalTimePicker(true)
-        }
-      })
 }
 
-toggleModal()
+toggleTabItem()
 
-const togleModalTimePicker = (hide = false) => {
-    const pickTimeBtn = document.querySelector('.dialog-time-toggle')
-    const timeContainer = document.querySelector('.dialog-toggle-container')
+$('.comment-add').click(function(){
+    var tabData = $(this).attr('data-tab');
 
-    const dateInput = document.querySelector('.dialog-date')
-    const timeInput = document.querySelector('.dialog-time')
+    $('.comment-add').removeClass('current-tab-comment');
+    $('.comments-tab').removeClass('active-comments');
 
-    pickTimeBtn.addEventListener('click', () =>{
-        pickTimeBtn.classList.add('dialog-time-toggle-hide')
-        timeContainer.classList.add('dialog-toggle-container-show')
+    $(this).addClass('current-tab-comment');
+    $("#"+tabData).addClass('active-comments');
 
-        dateInput.addEventListener('focus', () => {
-            dateInput.setAttribute('type', 'date')
-        })
-        timeInput.addEventListener('focus', () => {
-            timeInput.setAttribute('type', 'time')
-        })
-    })
+})
 
-    if (hide) {
-        pickTimeBtn.classList.remove('dialog-time-toggle-hide')
-        timeContainer.classList.remove('dialog-toggle-container-show')
-        dateInput.setAttribute('type', 'text')
-        timeInput.setAttribute('type', 'text')
-    }
 
-}
-
-togleModalTimePicker()
-var swiper = new Swiper(".mySwiperPopularCard", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    spaceBetween: 10
-  });
-
-  var swiper = new Swiper(".mySwiperPopular", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination-main",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      600: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        grid: {
-          rows: 1,
-          fill: "row",
-        },
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        grid: {
-          rows: 1,
-          fill: "row",
-        },
-      },
-      800: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      900: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-        navigation: false,
-      },
-      1280: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        grid: {
-          rows: 2,
-          fill: "row",
-        },
-      },
-    },
-  });
-
-var swiper = new Swiper(".mySwiperSolutions", {
+  var swiper = new Swiper(".mySwiperInstructionMobile", {
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 9,
-        spaceBetween: 50,
-      },
-    },
-  });
-var swiper = new Swiper(".mySwiperTrust", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
-  });
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+});
+
+
+
+var swiper = new Swiper(".mySwiperItemCommentMobile", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+            rows: 2,
+            fill: "row",
+          },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: "row",
+            },
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 1,
+              fill: "row",
+            },
+          },
+          800: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: "row",
+            },
+          },
+          900: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: "row",
+            },
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: "row",
+            },
+          },
+          1280: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: "row",
+            },
+          },
+        },
+      });
+var swiper = new Swiper(".mySwiperThumb", {
+      spaceBetween: 7,
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesProgress: true,
+		direction: 'vertical',
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+
+      1160: {
+        slidesPerView: 5,
+        spaceBetween: 7,
+      },
+    },
+    });
+    var swiper2 = new Swiper(".mySwiperThumb2", {
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+	  
+      thumbs: {
+        swiper: swiper,
+      },
+});
