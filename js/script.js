@@ -74,6 +74,74 @@ const checkOffsetTopMobile = () => {
 }
 
 checkOffsetTopMobile()
+var swiper = new Swiper(".mySwiperBuyTogether", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      },
+      1124: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      },
+    },
+});
+
+var swiper = new Swiper(".mySwiperPopularCard", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  spaceBetween: 10
+});
+const togleItemTimePicker = (hide = false) => {
+
+    const dateInput = document.querySelector('.item-callback-date')
+    const timeInput = document.querySelector('.item-callback-time')
+
+    dateInput.addEventListener('focus', () => {
+        dateInput.setAttribute('type', 'date')
+    })
+    timeInput.addEventListener('focus', () => {
+        timeInput.setAttribute('type', 'time')
+    })
+
+    if (hide) {
+        dateInput.setAttribute('type', 'text')
+        timeInput.setAttribute('type', 'text')
+    }
+
+}
+
+togleItemTimePicker()
 $('.item-tab').click(function(){
     var tab_id = $(this).attr('data-tab');
 
@@ -179,9 +247,13 @@ var swiper = new Swiper(".mySwiperApplicationObj", {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1124: {
         slidesPerView: 4,
         spaceBetween: 30,
       },
@@ -202,67 +274,18 @@ var swiper = new Swiper(".mySwiperApplicationObj", {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1124: {
         slidesPerView: 4,
         spaceBetween: 30,
       },
     },
   });
-const togleItemTimePicker = (hide = false) => {
-
-    const dateInput = document.querySelector('.item-callback-date')
-    const timeInput = document.querySelector('.item-callback-time')
-
-    dateInput.addEventListener('focus', () => {
-        dateInput.setAttribute('type', 'date')
-    })
-    timeInput.addEventListener('focus', () => {
-        timeInput.setAttribute('type', 'time')
-    })
-
-    if (hide) {
-        dateInput.setAttribute('type', 'text')
-        timeInput.setAttribute('type', 'text')
-    }
-
-}
-
-togleItemTimePicker()
-var swiper = new Swiper(".mySwiperBuyTogether", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-    },
-});
-
-var swiper = new Swiper(".mySwiperPopularCard", {
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  spaceBetween: 10
-});
 const toggleMobileMenu = () => {
     const burger = document.querySelectorAll('.burger')
     const mobileMenu = document.querySelector('.mobile-menu')
